@@ -43,6 +43,8 @@ h1, h2, h3 { font-weight: 800; letter-spacing: -0.03em; line-height: 1.1; text-w
 .define { margin-top: 56px; padding-left: 16px; border-left: 2px solid var(--line); color: var(--muted); font-size: .95rem; max-width: 520px; }
 .define b { color: var(--ink); font-weight: 800; }
 .define i { color: var(--muted); font-weight: 400; margin-right: 4px; }
+.define .ipa { color: var(--muted); margin: 0 4px; }
+.define small { display: block; margin-top: 4px; font-size: .8rem; color: var(--muted); }
 
 /* The eight caption styles, drawn the way the app's style picker shows them */
 .styles { list-style: none; display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-bottom: 40px; }
