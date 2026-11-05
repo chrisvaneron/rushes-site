@@ -33,13 +33,15 @@ h1, h2, h3 { font-weight: 800; letter-spacing: -0.03em; line-height: 1.1; text-w
 .actions { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; }
 .free { color: var(--muted); font-size: .95rem; }
 
-/* A frame of the finished video: a caption in each of the four styles */
-.frame { margin: 56px auto 0; max-width: 360px; aspect-ratio: 9 / 16; border-radius: 28px; background: linear-gradient(160deg, #2A2E35, #0D0F12 60%); border: 1px solid var(--line); position: relative; overflow: hidden; }
-.frame .cue { position: absolute; left: 50%; transform: translateX(-50%); white-space: nowrap; font-weight: 800; font-size: 1.1rem; }
-.cue.plain { top: 22%; color: #fff; text-shadow: 0 2px 10px rgba(0,0,0,.8); }
-.cue.loud { top: 40%; color: #fff; -webkit-text-stroke: 1px #000; text-transform: uppercase; letter-spacing: .02em; font-size: 1.35rem; }
-.cue.card { top: 58%; background: rgba(0,0,0,.78); color: #fff; padding: 6px 12px; border-radius: 8px; }
-.cue.quiet { top: 76%; color: rgba(255,255,255,.85); font-weight: 600; font-size: .95rem; }
+/* The four caption styles, as the app's style picker shows them */
+.styles { list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 14px; margin-bottom: 40px; }
+.styles li { background: linear-gradient(160deg, #2A2E35, #15171B); border: 1px solid var(--line); border-radius: 16px; aspect-ratio: 4 / 3; display: flex; align-items: center; justify-content: center; position: relative; }
+.styles small { position: absolute; left: 0; right: 0; bottom: 10px; text-align: center; color: var(--muted); font-size: .78rem; font-weight: 600; }
+.cue { font-weight: 800; font-size: 1rem; white-space: nowrap; }
+.cue.plain { color: #fff; text-shadow: 0 2px 10px rgba(0,0,0,.8); }
+.cue.loud { color: #fff; -webkit-text-stroke: 1px #000; text-transform: uppercase; letter-spacing: .02em; font-size: 1.15rem; }
+.cue.card { background: rgba(0,0,0,.78); color: #fff; padding: 6px 12px; border-radius: 8px; }
+.cue.quiet { color: rgba(255,255,255,.85); font-weight: 600; font-size: .9rem; }
 
 section { padding: 72px 0; border-top: 1px solid var(--line); }
 section h2 { font-size: clamp(1.8rem, 4vw, 2.8rem); margin-bottom: 28px; }
