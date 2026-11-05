@@ -29,6 +29,14 @@ h1, h2, h3 { font-weight: 800; letter-spacing: -0.03em; line-height: 1.1; text-w
 .btn-sm { padding: 9px 18px; font-size: .88rem; }
 
 .hero { padding: 72px 0 56px; }
+.hero-in { display: grid; grid-template-columns: 1.3fr 1fr; gap: 48px; align-items: center; }
+.phone { justify-self: center; width: min(300px, 100%); border-radius: 36px; overflow: hidden; border: 1px solid var(--line); box-shadow: 0 30px 80px rgba(0,0,0,.6); background: var(--surface); }
+.phone video { display: block; width: 100%; aspect-ratio: 9 / 16; object-fit: cover; }
+.shot { border-radius: 14px; border: 1px solid var(--line); margin-bottom: 18px; }
+.steps .shot { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; object-position: top; }
+.steps .shot.bottom { object-position: bottom; }
+.cap-in { display: grid; grid-template-columns: 260px 1fr; gap: 40px; align-items: start; }
+.shot.fix { margin: 0; }
 .hero .lede { font-size: 1.25rem; max-width: 560px; margin: 24px 0 32px; }
 .actions { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; }
 .free { color: var(--muted); font-size: .95rem; }
@@ -108,6 +116,8 @@ section h2 { font-size: clamp(1.8rem, 4vw, 2.8rem); margin-bottom: 28px; }
 @media (max-width: 640px) {
   .links { display: none; }
   .hero { padding: 40px 0 48px; }
+  .hero-in, .cap-in { grid-template-columns: 1fr; }
+  .phone { width: min(260px, 100%); }
   section { padding: 56px 0; }
   .row { flex-direction: column; align-items: flex-start; gap: 8px; }
   .styles { grid-template-columns: repeat(2, 1fr); }
