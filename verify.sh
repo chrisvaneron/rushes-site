@@ -14,7 +14,7 @@ for html in *.html; do
     sed 's/?.*//' | \
     { fail=0; while IFS= read -r ref; do
       resolved="${ref#/}"
-      if [ -z "$resolved" ] || [ ! -f "$resolved" ]; then
+      if [ -z "$resolved" ] || { [ ! -f "$resolved" ] && [ ! -f "$resolved.html" ]; }; then   # GitHub Pages serves /terms for terms.html
         echo "BROKEN: ${html} references ${ref} (not found)"
         fail=1
       fi
